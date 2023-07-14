@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <style>
+      .sugestions{
+        display: flex;
+        gap: 8px;
+        margin-top: 8px;
+      }
+
+      body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      textarea{
+        /* width: 100%; */
+        height: 30px;
+        resize: none;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        padding: 8px;
+        font-size: 16px;
+      }
+
+      button{
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        padding: 8px;
+        font-size: 16px;
+        background: #fff;
+        cursor: pointer;
+      }
+
+      button:hover{
+        background: #ccc;
+      }
+
+    </style>
+  </head>
+  <body>
+    <textarea type="text" id="input" cols="100"></textarea>
+    <div class="sugestions">
+      <button id="sug1"></span>
+      <button id="sug2"></span>
+      <button id="sug3"></span>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
