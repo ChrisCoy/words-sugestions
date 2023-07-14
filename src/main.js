@@ -4,6 +4,8 @@ import data from "../output/model.json"
 
 const model = data;
 
+console.log(model.length);
+
 
 const input = document.getElementById("input");
 
@@ -60,14 +62,14 @@ function main() {
 }
 main();
 
-function getRecursiveWords(word) {
-  const words = model[word];
+function getRecursiveWords(word, found = false) {
+  if (found) return word;
 
-  if (!words) {
-    return [];
-  }
+  const wordsFromModel = model[word];
 
-  return [word, ...getRecursiveWords(words[0])];
+  const wordToReturn = wordsFromModel?.[0] || wordsFromModel?.[1] || wordsFromModel?.[2];
+
+  return getRecursiveWords(wordsFromModel, !!wordsFromModel);
 }
 
 function changeInput(value) {

@@ -4,7 +4,7 @@
 const fs = require("fs")
 const path = require("path")
 
-const folderPath = path.join(__dirname, '../public');
+const folderPath = path.join(__dirname, '../modelData');
 
 const model = new Map();
 
